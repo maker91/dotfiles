@@ -1,0 +1,14 @@
+Host phobos
+    HostName 192.168.1.253
+    User jamph
+    IdentityFile ~/.ssh/id_ed25519
+
+Host phobos_vpn
+    HostName 172.23.2.5
+    User jamph
+    IdentityFile ~/.ssh/id_ed25519
+
+Host deimos
+    HostName 192.168.1.252
+    User jamde
+    IdentityFile ~/.ssh/id_ed25519

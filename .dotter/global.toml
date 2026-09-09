@@ -1,0 +1,19 @@
+[ssh.files]
+sshconfig = "~/.ssh/config"
+
+[git.files]
+git = "~/.gitconfig"
+
+[neofetch.files]
+neofetch = { target = "~/.config/neofetch", type = "symbolic", recurse = false }
+
+[nvim.files]
+nvim = { target = "~/.config/nvim", type = "symbolic", recurse = false }
+
+[zsh.files]
+zshrc = "~/.zshrc"
+"oh-my-zsh-custom" = { target = "~/.oh-my-zsh/custom", type = "symbolic", recurse = false }
+"p10k.zsh" = "~/.p10k.zsh"
+
+[settings]
+default_target_type = "automatic"

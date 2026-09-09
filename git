@@ -1,0 +1,6 @@
+[user]
+	name = Matthew Reckless
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
