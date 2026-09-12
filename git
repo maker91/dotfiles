@@ -1,5 +1,6 @@
 [user]
 	name = Matthew Reckless
+	email = mail@matthewreckless.co.uk
 [core]
 	editor = nvim
 [init]
