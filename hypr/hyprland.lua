@@ -95,10 +95,13 @@ hl.config({
         gaps_in  = 10,
         gaps_out = 20,
 
-        border_size = 2,
+        border_size = 3,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = {
+              colors = { "rgba(7b2cbfff)", "rgba(e0aaffff)" },
+              angle = 45
+            },
             inactive_border = "rgba(595959aa)",
         },
 
@@ -239,7 +242,7 @@ hl.config({
         kb_options = "",
         kb_rules   = "",
 
-        follow_mouse = 1,
+        follow_mouse = 0,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
         repeat_rate = 35,

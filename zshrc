@@ -124,3 +124,8 @@ unsetopt share_history
 # powerlevel10k configuration
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Set the system pager to nvimpager
+export PAGER="nvimpager"
+export MANPAGER="nvimpager"
+
