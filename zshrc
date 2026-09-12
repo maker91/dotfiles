@@ -11,6 +11,10 @@ export PATH="$HOME/.local/bin:$PATH"
 # Add cargo tools to the path
 source $HOME/.cargo/env
 
+# Add 'fnm' environment variables for 'zsh'
+# Add hook to change Node version on change directory
+source <(fnm env --shell zsh --use-on-cd)
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
