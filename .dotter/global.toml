@@ -15,5 +15,17 @@ zshrc = "~/.zshrc"
 "oh-my-zsh-custom" = { target = "~/.oh-my-zsh/custom", type = "symbolic", recurse = false }
 "p10k.zsh" = "~/.p10k.zsh"
 
+[hypr.files]
+hypr = { target = "~/.config/hypr", type = "symbolic", recurse = false }
+
+[kitty.files]
+kitty = { target = "~/.config/kitty", type = "symbolic", recurse = false }
+
+[waybar.files]
+waybar = { target = "~/.config/waybar", type = "symbolic", recurse = false }
+
+[rofi.files]
+rofi = { target = "~/.config/rofi", type = "symbolic", recurse = false }
+
 [settings]
 default_target_type = "automatic"
