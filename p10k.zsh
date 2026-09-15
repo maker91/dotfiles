@@ -1134,7 +1134,7 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_RUST_VERSION_VISUAL_IDENTIFIER_EXPANSION='⭐'  
   # Display the active toolchain's full triple alongside the compiler version
-  typeset -g POWERLEVEL9K_RUST_VERSION_CONTENT_EXPANSION='${P9K_CONTENT:+$({rustup show active-toolchain || echo $P9K_CONTENT} 2>/dev/null | awk "{print \$1}") v$P9K_CONTENT}'
+  typeset -g POWERLEVEL9K_RUST_VERSION_CONTENT_EXPANSION='${P9K_CONTENT:+v$P9K_CONTENT $({rustup show active-toolchain || echo $P9K_CONTENT} 2>/dev/null | awk -F"-" "{print \$1}")}'
 
   ###############[ dotnet_version: .NET version (https://dotnet.microsoft.com) ]################
   # .NET version color.
