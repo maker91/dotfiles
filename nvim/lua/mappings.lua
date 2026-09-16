@@ -75,3 +75,17 @@ map("n", "td", function() vim.diagnostic.open_float() end, { desc = "Open floati
 
 -- blame.nvim mappings
 map("n", "<leader>gb", "<cmd>BlameToggle window<cr>", { desc = "Toggle git blame in window mode" })
+
+-- Open a scratch buffer
+map("n", "<leader>B", function()
+  -- Create an unlisted scratch buffer
+  local buf = vim.api.nvim_create_buf(false, true)
+  
+  -- Prevent it from prompting to save on exit
+  vim.bo[buf].buftype = "nofile"
+  vim.bo[buf].bufhidden = "hide"
+  vim.bo[buf].swapfile = false
+  
+  -- Open it in the current window
+  vim.api.nvim_set_current_buf(buf)
+end, { desc = "buffer scratch" })
