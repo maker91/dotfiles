@@ -11,18 +11,13 @@
 	"include": [
 		"~/.config/waybar/modules/custom/*.jsonc",
 		"~/.config/waybar/modules/hyprland/*.jsonc",
-		// "~/.config/waybar/modules/optional/*.jsonc",
 		"~/.config/waybar/modules/*.jsonc"
 	],
 
 	"modules-left": [
-		"custom/user",
-
 		"custom/left#bg-1",
 		"hyprland/workspaces",
 		"custom/right#bg-1"
-
-		// "hyprland/window"
 	],
 
 	"modules-center": [
@@ -43,12 +38,9 @@
 		"custom/right#accent",
 
 		"custom/right#inverse",
-		// "idle_inhibitor",
-		// "clock#time",
     "group/pulseaudio",
 		"custom/right#bg-3",
 
-		// "clock#date",
     "backlight",
 		"custom/right#bg-2",
 
