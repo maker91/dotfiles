@@ -16,6 +16,7 @@ local terminal = "kitty"
 local menu = "rofi -show drun"
 local auto_programs = {
   "waybar",
+  "hyprpaper"
 }
 
 -------------------

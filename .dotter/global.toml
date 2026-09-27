@@ -17,6 +17,7 @@ zshrc = "~/.zshrc"
 
 [hypr.files]
 hypr = { target = "~/.config/hypr", type = "symbolic", recurse = false }
+wallpapers = { target = "~/.wallpapers", type = "symbolic", recurse = false }
 
 [kitty.files]
 kitty = { target = "~/.config/kitty", type = "symbolic", recurse = false }
