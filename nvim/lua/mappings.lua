@@ -21,9 +21,21 @@ end, { desc = "general format file" })
 if require("nvconfig").ui.tabufline.enabled then
   map("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
 
-  map("n", "<leader>x", function()
+  map("n", "<leader>xx", function()
     require("nvchad.tabufline").close_buffer()
-  end, { desc = "buffer close" })
+  end, { desc = "Close current buffer" })
+
+  map("n", "<leader>xo", function()
+    require("nvchad.tabufline").closeAllBufs(false)
+  end, { desc = "Close other buffers" })
+
+  map("n", "<leader>xa", function()
+    require("nvchad.tabufline").closeAllBufs(true)
+  end, { desc = "Close all buffers" })
+
+  -- Remap [b and ]b to buffer switch
+  map("n", "[b", function() require("nvchad.tabufline").prev() end, { desc = "Previous Tab" })
+  map("n", "]b", function() require("nvchad.tabufline").next() end, { desc = "Next Tab" })
 end
 
 -- Comment
@@ -59,10 +71,6 @@ map("i", "jk", "<ESC>")
 
 -- Add newline
 map("n", "<CR>", "o<ESC>")
-
--- Remap [b and ]b to tab switch
-map("n", "[b", function() require("nvchad.tabufline").prev() end, { desc = "Previous Tab" })
-map("n", "]b", function() require("nvchad.tabufline").next() end, { desc = "Next Tab" })
 
 -- Telescope keymaps
 map("n", "<leader>fs", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Find symbol in workspace" })
