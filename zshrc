@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Source the local zshrc file if available
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # Add the local bin directory to the path
 export PATH="$HOME/.local/bin:$PATH"
 
