@@ -48,6 +48,7 @@
     # node_version          # node.js version
     # go_version            # go version (https://golang.org)
     rust_version          # rustc version (https://www.rust-lang.org)
+    fnm
     # dotnet_version        # .NET version (https://dotnet.microsoft.com)
     # php_version           # php version (https://www.php.net/)
     # laravel_version       # laravel php framework version (https://laravel.com/)
@@ -1781,6 +1782,32 @@
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
     prompt_example
+  }
+
+  function prompt_fnm() {
+    # 1. Manually climb upward to check for a package.json
+    local dir="$PWD"
+    local found_package=false
+
+    while [[ "$dir" != "/" ]]; do
+      if [[ -f "$dir/package.json" ]]; then
+        found_package=true
+        break
+      fi
+      dir="${dir:h}" # Move up to the parent directory (:h gets the head/dirname)
+    done
+
+    # If we hit the root directory and never found a package.json, exit quietly
+    [[ "$found_package" == true ]] || return
+
+    # 2. Get the current active version from fnm
+    local fnm_current=$(fnm current 2>/dev/null)
+    
+    # If fnm isn't installed or returning a version, don't show the segment
+    [[ -n "$fnm_current" && "$fnm_current" != "none" ]] || return
+
+    # 3. Render the segment
+    p10k segment -b '238' -f '214' -i '⬢' -t "$fnm_current"
   }
 
   # User-defined prompt segments can be customized the same way as built-in segments.
