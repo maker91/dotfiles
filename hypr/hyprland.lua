@@ -16,7 +16,8 @@ local terminal = "kitty"
 local menu = "rofi -show drun"
 local auto_programs = {
   "waybar",
-  "hyprpaper"
+  "hyprpaper",
+  "mako"
 }
 
 -------------------
@@ -180,6 +181,13 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
+
+-- Mako binds
+hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("makoctl dismiss -a"), { locked = true })
+
+-- hyprshot binds
+hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("hyprshot -m region -z --clipboard-only"), { locked = true })
+hl.bind(mainMod .. " + SHIFT + s", hl.dsp.exec_cmd("hyprshot -m active -m output --clipboard-only"), { locked = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })

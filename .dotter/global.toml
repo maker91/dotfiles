@@ -28,5 +28,8 @@ waybar = { target = "~/.config/waybar", type = "symbolic", recurse = false }
 [rofi.files]
 rofi = { target = "~/.config/rofi", type = "symbolic", recurse = false }
 
+[mako.files]
+mako = { target = "~/.config/mako", type = "symbolic", recurse = false }
+
 [settings]
 default_target_type = "automatic"

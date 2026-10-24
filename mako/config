@@ -1,0 +1,15 @@
+font=monospace 12
+background-color=#00000080
+text-color=#FFFFFFFF
+width=350
+height=600
+max-history=10
+padding=5
+border-size=1
+border-color=#7b2cbfff
+border-radius=7
+group-by=summary
+icons=1
+
+[grouped]
+format=<b>%s</b>\n%b
